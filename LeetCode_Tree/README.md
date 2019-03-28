@@ -1,7 +1,8 @@
 # LeetCode-Road
 LeetCode's road of mine
-## 树的层次遍历
-这是LeetCode的第107道题:[code](/LeetCode_Tree/LevelOrderBottom.java)
+## LeetCode107题(二叉树层次遍历)
+这是LeetCode的第107道题:
+[code107](/LeetCode_Tree/LevelOrderBottom.java)
 ```
      3
     / \
@@ -18,3 +19,20 @@ LeetCode's road of mine
   [3]
 ]
 ```
+## LeetCode108题(平衡二叉树)
+[code108](/LeetCode_Tree/SortedArrayToBST.java)
+```
+Given the sorted array: [-10,-3,0,5,9],
+
+One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:
+
+      0
+     / \
+   -3   9
+   /   /
+ -10  5
+ ```
+ 将有序数组中的数字排列成二叉树的样子.
+ 
+ 思路:采取二分法的思想,以中间数组为中心,分别对左子树和右子树进行递归,当递到最底层节点时,return null,最后返回根节点.
+ 
