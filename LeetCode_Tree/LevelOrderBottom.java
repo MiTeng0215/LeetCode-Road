@@ -7,6 +7,7 @@ import java.util.Queue;
 public class LevelOrderBottom {
 
 	public static void main(String[] args) {
+		//灏嗙畝鍗曠殑浜屽弶鏍戝缓绔嬪ソ
 		TreeNode root = new TreeNode(3);
 		TreeNode left = new TreeNode(9);
 		TreeNode right = new TreeNode(20);
@@ -20,29 +21,19 @@ public class LevelOrderBottom {
 	}
 
 	private static List<List<Integer>> levelOrderBottom(TreeNode root) {
-		 List<List<Integer>> wrapList = new LinkedList<List<Integer>>();
-         levelMaker(wrapList, root, 0);
-         return wrapList;
+		List<List<Integer>> wrapList = new LinkedList<List<Integer>>();
+         	levelMaker(wrapList, root, 0);
+        	return wrapList;
 	}
 	private static void levelMaker(List<List<Integer>> list, TreeNode root, int level) {
 		if(root == null) return;
-		//如果层数大于等于list中的个数,就添加一个list
-        if(level >= list.size()) {
-            list.add(0,new LinkedList<Integer>());
-        }
-        levelMaker(list, root.left, level+1);
-        levelMaker(list, root.right, level+1);
-        //反向在list中放置LinkedList
-        list.get(list.size()-level-1).add(root.val);
+		//濡傛灉灞傛暟澶т簬绛変簬list涓殑涓暟,灏辨坊鍔犱竴涓猯ist
+		if(level >= list.size()) {
+		    list.add(0,new LinkedList<Integer>());
+		}
+		levelMaker(list, root.left, level+1);
+		levelMaker(list, root.right, level+1);
+		//鍙嶅悜鍦╨ist涓斁缃甃inkedList
+		list.get(list.size()-level-1).add(root.val);
 	}
-
-	private static void preTra(TreeNode root) {
-		if(root ==null)
-			return;
-		System.out.println(root.val);
-		preTra(root.left);
-		preTra(root.right);
-		
-	}
-
 }
