@@ -5,7 +5,7 @@ public class SortedArrayToBST {
 	public static void main(String[] args) {
 		int nums[] = {-10,-3,0,5,9};
 		TreeNode root = sortedArrayToBST(nums);
-		//Ç°Ğò±éÀú¶ş²æÊ÷
+		//å‰åºéå†äºŒå‰æ ‘
 		preTra(root);
 	}
 
@@ -19,11 +19,10 @@ public class SortedArrayToBST {
 	}
 
 	private static TreeNode sortedArrayToBST(int[] nums) {
-		// ²ÉÈ¡¶ş·Ö·¨µÄË¼Ïë½øĞĞÆ½ºâ¶ş²æÊ÷µÄ×éºÏ
-		//½«numsµÄÖĞ¼äÎ»×÷Îªrootµã
+		// é‡‡å–äºŒåˆ†æ³•çš„æ€æƒ³è¿›è¡Œå¹³è¡¡äºŒå‰æ ‘çš„ç»„åˆ
+		//å°†numsçš„ä¸­é—´ä½ä½œä¸ºrootç‚¹
 		int low = 0;
 		int high = nums.length-1;
-		int mid = (low +high)/2;
 		TreeNode root = toBST(low,high,nums);
 		return root;
 	}
@@ -33,10 +32,10 @@ public class SortedArrayToBST {
 			return null ;
 		int mid = (low+high)/2;
 		TreeNode root = new TreeNode(nums[mid]);
-        //·Ö±ğÆ½ºâ×óÓÒ×ÓÊ÷
+        //åˆ†åˆ«å¹³è¡¡å·¦å³å­æ ‘
 		root.left = toBST(low,mid-1,nums);
 		root.right = toBST(mid+1,high,nums);
-        //½«Ö÷½Úµã·µ»Ø
+        //å°†ä¸»èŠ‚ç‚¹è¿”å›
 		return root;
 	}
 
