@@ -43,16 +43,40 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
  
  如图就是一个平衡二叉树:
  
- ```
+```
     3
    / \
   9  20
     /  \
    15   7
- ```
+```
  #### 思路:
  
 由于递归代码的精简性,我们优先选择用递归的方法去解答此道题.沿着递归的思想,首先我们对根节点作出跳出递归的判断,如果根节点为空,说明此时已到达叶子节点,直接返回True,然后分别计算左右子树的深度,不满足,跳出.满足后再分别对左右子树进行是否平衡的判断.求二叉树的深度依然延续此递归思想.
+ ## LeetCode111题(二叉树的深度)
+ [code111](/LeetCode_Tree/MinDepth.java)
  
+求一个二叉树的最小深度
 
+Given a binary tree, find its minimum depth.
+
+The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
+
+Note: A leaf is a node with no children.
+
+Example:
+
+Given binary tree [3,9,20,null,null,15,7],
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+return its minimum depth = 2.
+
+#### 思路
+依旧使用递归的思想,如果一个二叉树的左子树或右子树一直为空时,则要对该树一直求深度,因为此树的叶子节点就在最底端.当该二叉树有分叉时,则分别对左右子树求深度,然后选择最小深度.
+   
  
