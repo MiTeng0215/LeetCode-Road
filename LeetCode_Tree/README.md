@@ -78,5 +78,40 @@ return its minimum depth = 2.
 
 #### 思路
 依旧使用递归的思想,如果一个二叉树的左子树或右子树一直为空时,则要对该树一直求深度,因为此树的叶子节点就在最底端.当该二叉树有分叉时,则分别对左右子树求深度,然后选择最小深度.
-   
- 
+
+## LeetCode112题(遍历)
+
+
+Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.
+
+Note: A leaf is a node with no children.
+
+#### Example:
+
+Given the below binary tree and sum = 22,
+```
+      5
+     / \
+    4   8
+   /   / \
+  11  13  4
+ /  \      \
+7    2      1
+```
+return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
+
+#### 思路
+此题有两种解法,都是摘抄自LeetCode中大神对此题提交的答案
+
+#### 第一种:递归(源于:[berkayk](https://leetcode.com/problems/path-sum/discuss/36372/Easy-5-Lines-and-Clean-Java-Solution))
+```
+ if (root == null)
+     return false;
+        
+  if (root.left == null && root.right == null && root.val == sum) // Leaf check
+     return true;
+        
+  return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
+```
+#### 第二种:双栈解法(源于:[young_stone](https://leetcode.com/problems/path-sum/discuss/36580/Java-solution-both-recursion-and-iteration))
+代码在:[code112]()
