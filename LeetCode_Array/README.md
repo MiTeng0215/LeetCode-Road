@@ -1,5 +1,5 @@
 ### LeetCode118题
-[code118]()
+[code118](/LeetCode_Array/Pascal's Triangle.java)
 
 Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
 
