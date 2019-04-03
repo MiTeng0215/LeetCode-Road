@@ -43,6 +43,6 @@ public:
 };
 ```
 ### LeetCode121题
-[code](/LeetCode_Array/maxProfit_1.java)
+[code121](/LeetCode_Array/maxProfit_1.java)
 
-此题比较简单,但依然有可以优化的地方,代码中有O(n^2)和o(n)两种解法
+此题比较简单,但依然有可以优化的地方,代码中有O(n^2)和O(n)两种解法
