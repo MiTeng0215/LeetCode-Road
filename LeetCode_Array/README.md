@@ -59,3 +59,23 @@ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-
 ```
 
 此题比较简单,但依然有可以优化的地方,代码中有O(n^2)和O(n)两种解法
+### LeetCode122题:
+这是我自己的作答:[code122](/LeetCode_Array/maxProfit_02.java)这是运用上一题中的峰谷值做法,针对此题来说较为啰嗦了
+
+跟上一题相比,这题不限制交易次数.底下是时间复杂度为O(n),空间复杂度O(1)的作答
+
+#### 思路:
+只要第二天的价格比昨天高,就可以直接交易
+```
+class Solution {
+    public int maxProfit(int[] prices) {
+        int maxprofit = 0;
+        for (int i = 1; i < prices.length; i++) {
+            if (prices[i] > prices[i - 1])
+                maxprofit += prices[i] - prices[i - 1];
+        }
+        return maxprofit;
+    }
+}
+```
+
