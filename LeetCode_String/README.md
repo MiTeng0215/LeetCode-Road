@@ -28,3 +28,45 @@ For example:
 ```
 **思路**
 此题相当于一个26进制的题,首先先建立一个空字符串,然后不断取余
+
+
+### LeetCode5题:
+
+Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
+
+**Example 1:**
+```
+Input: "babad"
+Output: "bab"
+Note: "aba" is also a valid answer.
+```
+先前按自己的思路做了一下该题,主要是是通过暴力求解的方式,查找每一个字母是否有对应的回文串,然后找出最长的回文串,这种方式只能解决简单的字符串,当字符过长时,会提示"Time Limit Exceeded",所以此方法不是一个好方法.底下介绍LeetCode推荐的几种解法.
+
+#### Approach 1: Longest Common Substring
+
+**思路:**
+反转字符串,找出公共的字符串.然后公共字符串不一定就是回文字符串,例如是S = "abacdfgdcaba", S'= "abacdgfdcaba".公共字符串是:"abacd",显然不是一个正确答案.但也很容易纠正,在查找到一个最长公共子串后,再利用反转看两个字符串是否相等,相等就是最长回文,不等则选择下一个进行判断.
+
+这时就又牵扯到一个最长公共子串的算法,本文选择用字符串矩阵的方式查找公共字符串.
+**思路:**
+
+假设:S1 = abcdef S2 = bcde
+
+| |a|b|c|d|e|f|
+|-|-|-|-|-|-|-|
+|b|0|1|0|0|0|0|
+|c|0|0|1|0|0|0|
+|d|0|0|0|1|0|0|
+|e|0|0|0|0|1|0|
+
+由表格可以看出,最长对角线即为最长公共子串,除了找到最长公共子串外,我们还要记录每一个公共字符串所在的位置,方便做下一步查找,我们可以选择HashMap进行对公共字符串的记录.
+
+
+
+
+
+
+
+
+
+
