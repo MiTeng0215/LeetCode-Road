@@ -61,6 +61,31 @@ Note: "aba" is also a valid answer.
 
 由表格可以看出,最长对角线即为最长公共子串,除了找到最长公共子串外,我们还要记录每一个公共字符串所在的位置,方便做下一步查找,我们可以选择HashMap进行对公共字符串的记录.
 
+```python
+import numpy as np
+
+s1 = "babad"
+s2 = s1[::-1]
+print(s2)
+result = np.zeros((len(s1),len(s2)))
+
+for i in range(len(s1)):
+    for j in range(len(s2)):
+        if(s1[i]==s2[j]):
+            if(i == 0 or j == 0):
+                result[i][j] = 1
+                d.update({str(i)+str(j):1})
+            else:
+                result[i][j] = result[i-1][j-1] + 1
+                d.update({str(i)+str(j):result[i][j]})
+print(result)
+```
+以上代码可以看到公共字符串的情况,再从公共字符串中找出回文串.
+
+#### Dynamic Programming
+
+假如子字符串已经是回文字符串,那子字符串的两头字母相同的话也是回文字符串
+We define P(i,j)P(i,j) as following:
 
 
 
