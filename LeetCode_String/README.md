@@ -82,15 +82,12 @@ print(result)
 ```
 以上代码可以看到公共字符串的情况,再从公共字符串中找出回文串.
 
-#### Dynamic Programming
-
-假如子字符串已经是回文字符串,那子字符串的两头字母相同的话也是回文字符串:
 
 #### Dynamic Programming
 
-code[005]()
+[code125](/LeetCode_String/longestPalindrome.py)
 
-
+此代码采取动态规划的方法进行求解,详情可看代码注解
 
 
 
