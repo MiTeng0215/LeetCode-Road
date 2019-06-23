@@ -84,8 +84,12 @@ print(result)
 
 #### Dynamic Programming
 
-假如子字符串已经是回文字符串,那子字符串的两头字母相同的话也是回文字符串
-We define P(i,j)P(i,j) as following:
+假如子字符串已经是回文字符串,那子字符串的两头字母相同的话也是回文字符串:
+
+#### Dynamic Programming
+
+code[005]()
+
 
 
 
