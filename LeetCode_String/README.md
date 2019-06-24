@@ -89,7 +89,23 @@ print(result)
 
 此代码采取动态规划的方法进行求解,详情可看代码注解
 
+### LeetCode6题
 
+The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+```
+P   A   H   N
+A P L S I I G
+Y   I   R
+```
+And then read line by line: "PAHNAPLSIIGYIR"
+
+简单来说,就是让字符串按给定的行数走S形,然后输出s形字符串
+
+#### 思路:
+
+思路很简单,先建立一个List,然后有几行就创建几个字符串,加入到list中.接着在字符串中的字母按照s形加入到字符串中,设置一个方向变量,当方向走到底时,反向,直至到最后一个字母.
+
+[code006](/LeetCode_String/zigzag.py)
 
 
 
