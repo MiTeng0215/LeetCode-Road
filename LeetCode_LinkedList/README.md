@@ -1,6 +1,7 @@
 ### LeetCode24题
 
-[code24](/LeetCode-Road/LeetCode_LinkedList/SwapNodes.py)
+[code24](/LeetCode_LinkedList/SwapNodes.py)
+
 Given a linked list, swap every two adjacent nodes and return its head.
 You may not modify the values in the list's nodes, only nodes itself may be changed.
 ```
