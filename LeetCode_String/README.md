@@ -90,6 +90,7 @@ print(result)
 此代码采取动态规划的方法进行求解,详情可看代码注解
 
 ### LeetCode6题
+[code006](/LeetCode_String/zigzag.py)
 
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 ```
@@ -105,7 +106,38 @@ And then read line by line: "PAHNAPLSIIGYIR"
 
 思路很简单,先建立一个List,然后有几行就创建几个字符串,加入到list中.接着在字符串中的字母按照s形加入到字符串中,设置一个方向变量,当方向走到底时,反向,直至到最后一个字母.
 
-[code006](/LeetCode_String/zigzag.py)
+### LeetCood12题:
+[code12](/LeetCode_String/IntegertoRoman.py)
+
+Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+```
+Symbol       Value
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+```
+For example, two is written as II in Roman numeral, just two one's added together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.
+
+#### Example 1:
+```
+Input: 58
+Output: "LVIII"
+Explanation: L = 50, V = 5, III = 3.
+```
+#### 思路:
+此题不是很难,因为罗马数字最大只能到3999,把从各位到千位安置好即可,比如个位的8,就是VIII,4和9单独安置.十位如果是8,就是80:LXXX.做一个键值对查询就行了
+我的代码很清晰,直接可以看懂.
+
+
+
+
+
+
+
 
 
 
