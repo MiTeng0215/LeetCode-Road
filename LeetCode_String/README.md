@@ -132,7 +132,18 @@ Explanation: L = 50, V = 5, III = 3.
 此题不是很难,因为罗马数字最大只能到3999,把从各位到千位安置好即可,比如个位的8,就是VIII,4和9单独安置.十位如果是8,就是80:LXXX.做一个键值对查询就行了
 我的代码很清晰,直接可以看懂.
 
+### LeetCode17题:
+[code17](/LeetCode_String/PhoneNumber.py)
 
+Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
+A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+#### Example:
+```
+Input: "23"
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+```
+#### 思路:
+一开始我是以非递归的思想去思考的该题,看了答案才知道用递归的思想,此题代码将变得简洁而优雅.此题就像我们学数学时计算排列组合一样,以树状图的思想层层递归,走到底就返回.代码言简意赅,容易理解.
 
 
 
