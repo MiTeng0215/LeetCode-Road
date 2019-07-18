@@ -78,4 +78,20 @@ class Solution {
     }
 }
 ```
+### LeetCode31题：
+[code31](/LeetCode_Array/nextPermutation.py)
+
+Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
+If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).
+The replacement must be in-place and use only constant extra memory.
+Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.
+
+```
+1,2,3 → 1,3,2
+3,2,1 → 1,2,3
+1,1,5 → 1,5,1
+```
+#### 思路：
+此题是一个有规律的排列组合，输出下一个较大的序列。先从最后一个数字开始找，先找出最大序列，如果找到首位数仍然是最大序列，则直接反置。如果不是，则将最大序列的前一个数字替换最大序列中稍比它大的数字，然后将后面的序列反置即可。
+
 
