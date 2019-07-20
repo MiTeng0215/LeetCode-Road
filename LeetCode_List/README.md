@@ -42,3 +42,23 @@ Input:
 ```
 #### 思路：
 我唯一想到的方法就是暴力求解方法，但代码长度过长且不优雅，但是有位大佬提供了一个很优雅的暴力求解法，直接看代码即可，简单易懂。
+
+### LeetCode33题：
+(code)[/LeetCode_List/RotatedArray.py]
+
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+
+(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+
+You are given a target value to search. If found in the array return its index, otherwise return -1.
+
+You may assume no duplicate exists in the array.
+
+Your algorithm's runtime complexity must be in the order of O(log n).
+#### Example 1:
+```
+Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
+```
+#### 思路：
+该题思路其实很简单，但题目中有一个要求就是，时间复杂度要是log（n），所以此题的难度稍微增加一点点，但通过二分法可直接解决此题，只需找到三个边界条件即可。
