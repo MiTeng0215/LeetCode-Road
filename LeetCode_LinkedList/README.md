@@ -60,7 +60,7 @@ n等于节点个数时,属于另一种情况,单独考虑.代码简洁易懂.
 
 F(n,m)=((F(n-1,m)%n)+k)%N   #这里的N是最大编号N
 #### 代码实现
-```
+```python
 def joseph(n,k,m):
     p = 0
     for i in range(2,n+1):
